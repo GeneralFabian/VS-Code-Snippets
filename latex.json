@@ -1,0 +1,646 @@
+{
+	// Place your snippets for latex here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"textforall": {
+		"prefix": "@taa",
+		"body": "\\tforall "
+	},
+	"textexists": {
+		"prefix": "@tee",
+		"body": "\\texists "
+	},
+	"Inline math": {
+		"prefix": "inm",
+		"body": "\\( $1 \\)"
+	},
+	"No brace expansion": {
+		"prefix": "{",
+		"body": "",
+		"description": "No brace expansion"
+	},
+	"Mathtext": {
+		"prefix": "MTE",
+		"body": "\\text{${1:...}}",
+		"description": "Insert mathtext"
+	},
+	"Set": {
+		"prefix": "BSE",
+		"body": "\\Set*{$1\\given $2}",
+		"description": "Menge mit skaliertem | "
+	},
+	"Begin Something": {
+		"prefix": "beg",
+		"body": [
+			"\\begin{${1:...}}",
+			"\t$2",
+			"\\end{${1:...}}",
+		],
+		"description": "Insert an environment to be specified"
+	},
+	"Begin Proof": {
+		"prefix": "BPR",
+		"body": [
+			"\\begin{proof}[$1]",
+			"\t$2",
+			"\\end{proof}"
+		],
+		"description": "Insert a proof environment"
+	},
+	"Begin Remark Starred": {
+		"prefix": "BSRE",
+		"body": [
+			"\\begin{remark*}",
+			"\t$1",
+			"\\end{remark*}"
+		],
+		"description": "Insert a remark* environment"
+	},
+	"Begin Blank Starred": {
+		"prefix": "BSBL",
+		"body": [
+			"\\begin{blank*}[$1]",
+			"\t$2",
+			"\\end{blank*}"
+		],
+		"description": "Insert a blank* environment"
+	},
+	"Begin Blank": {
+		"prefix": "BBL",
+		"body": [
+			"\\begin{blank}[$1]",
+			"\t$2",
+			"\\end{blank}"
+		],
+		"description": "Insert a blank environment"
+	},
+	"Begin Blank Starred (Italics)": {
+		"prefix": "BSBLI",
+		"body": [
+			"\\begin{blankit*}[$1]",
+			"\t$2",
+			"\\end{blankit*}"
+		],
+		"description": "Insert a blank* environment"
+	},
+	"Begin Blank (Italics)": {
+		"prefix": "BBLI",
+		"body": [
+			"\\begin{blankit}[$1]",
+			"\t$2",
+			"\\end{blankit}"
+		],
+		"description": "Insert a blank environment"
+	},
+	"Begin Subroof": {
+		"prefix": "bspr",
+		"body": [
+			"\\begin{subproof}[$1]",
+			"\t$2",
+			"\\end{subproof}"
+		],
+		"description": "Insert a subproof environment"
+	},
+	"Begin Figure": {
+		"prefix": "bfi",
+		"body": [
+			"\\begin{figure}[H]",
+			"\t\\centering",
+			"\t\\includegraphics[width=${4:0.5}\\linewidth]{$1}",
+			"\t\\caption${2:*}{$3}",
+			"\t\\label{fig:$1}",
+			"\\end{figure}"
+		],
+		"description": "Insert a figure with caption and label"
+	},
+	"Inline Graphic": {
+		"prefix": "inlgr",
+		"body": "\\includegraphics[height=\\baselineskip]{$1}",
+		"description": "Insert a graphic at lineheight"
+	},
+	// ------------------------------------------ // 
+	"Höheres chi":{
+		"prefix": "@C",
+		"body":"\\Chi",
+		"description": "Insert greek letter Chi"
+	},
+	"Teilmenge":{
+		"prefix": "@inn",
+		"body": "\\subset ",
+		"description": "Teilmenge"
+	},
+	"Under Annotation":{
+		"prefix": "@under",
+		"body": "\\underAnn[$1]{$2}{$3}",
+		"description": "Bemerkungen unter der Gleichung"
+	},
+	"Over Annotation":{
+		"prefix": "@over",
+		"body": "\\overAnn[$1]{$2}{$3}",
+		"description": "Bemerkungen über der Gleichung"
+	},
+
+	"intertext":{
+		"prefix": "intt",
+		"body": "\\intertext{$1}",
+		"description": "Intertext in Gather etc"
+	},
+	"underbrace":{
+		"prefix": "@ubrace",
+		"body": "\\underbrace{$1}_{$2}", 
+		"description": "Underbrace under $1 with content $2"
+	},
+	"Commutative Diagram":{
+		"prefix": "BCD",
+		"body": [
+			"\\begin{tikzcd}",
+			"\t$1",
+			"\\end{tikzcd}"
+		],
+		"description": "Kommutatives Diagramm"
+	},
+	"Map":{
+		"prefix": "@map",
+		"body": "$1\\colon $2\\to $3",
+		"description": "Abbildung A->B"
+	},
+	"Wedge":{
+		"prefix": "@we",
+		"body": "\\wedge ",
+		"description": "Dach"
+	},
+	"one matrix":{
+		
+		"prefix": "@1",
+		"body": "\\mathds{1}"
+	},
+	"timplies": {
+		
+    "prefix": "timpl",
+		"body": "\\timplies"
+	},
+	"implies": {
+		
+    "prefix": "impl",
+		"body": "\\implies"
+	},
+	"norm": {
+		
+    "prefix": "@||",
+		"body": "\\norm{$1}"
+	},
+	"special norm": {
+		
+		"prefix": "@||*",
+			"body": "\\norm$1{$2}"
+		},
+	"euclidian norm": {
+		
+    "prefix": "@||E",
+		"body": "\\normE{$1}"
+	},
+	"operator norm": {
+		
+    "prefix": "@||op",
+		"body": "\\normop{$1}"
+	},
+	"supremums norm": {
+		
+    "prefix": "@||8",
+		"body": "\\norminf{$1}"
+	},
+	"complexs": {
+		
+    "prefix": "@cc",
+		"body": "\\complex"
+	},
+	"galoisf": {
+		
+	"prefix": "@ff",
+		"body": "\\galoisf"
+	},
+	"Quaternions": {
+		
+	"prefix": "@hh",
+		"body": "\\quaternions"
+	},
+	"kfield": {
+		
+    	"prefix": "@kk",
+		"body": "\\kfield"
+	},
+	"naturals": {
+		
+		"prefix": "@nn",
+		"body": "\\naturals"
+	},
+	"projective": {
+		
+    	"prefix": "@pp",
+		"body": "\\projective"
+	},
+	"reals": {
+		
+		"prefix": "@rr",
+		"body": "\\reals"
+	},
+	"rationals": {
+		
+    "prefix": "@qq",
+		"body": "\\rationals"
+	},
+	"sphere": {
+		
+		"prefix": "@ss",
+		"body": "\\sphere"
+	},
+	"wholes": {
+		
+	"prefix": "@zz",
+		"body": "\\integers"
+	},
+	"qquad": {
+		
+    "prefix": "@tttt",
+		"body": "\\qquad "
+	},
+	"quad": {
+		
+    "prefix": "@ttt",
+		"body": "\\quad "
+	},
+	"logicspace": {
+		
+    "prefix": "@tt",
+		"body": "\\logicspace "
+	},
+	"Begin aligned as subequation": {
+		
+    "prefix": "bals",
+		"body": [
+			"\\begin{aligned}[t]",
+			"\t$1",
+			"\\end{aligned}",
+		]
+	},
+	"Begin gathered as subequation": {
+		
+    "prefix": "bgas",
+		"body": [
+			"\\begin{gathered}[t]",
+			"\t$1",
+			"\\end{gathered}"
+		]
+	},
+	"Begin gather": {
+		
+    "prefix": "bga",
+		"body": [
+			"\\begin{gather}",
+			"\t$1",
+			"\\end{gather}"
+		]
+	},
+	"Begin gather starred": {
+		
+    "prefix": "bsga",
+		"body": [
+			"\\begin{gather*}",
+			"\t$1",
+			"\\end{gather*}"
+		]
+	},
+	"Begin multline": {
+		
+    "prefix": "bmu",
+		"body": [
+			"\\begin{multline}",
+			"\t$1",
+			"\\end{multline}"
+		]
+	},
+	"Begin multline starred": {
+		
+    "prefix": "bmus",
+		"body": [
+			"\\begin{multline*}",
+			"\t$1",
+			"\\end{multline*}"
+		]
+	},
+	"Begin split in equation": {
+		
+    "prefix": "bspeq",
+		"body": [
+			"\\begin{equation}",
+			"\t\\begin{split}",
+			"\t\t$1",
+			"\t\\end{split}",
+			"\\end{equation}"
+		]
+	},
+	"Begin split in equation starred": {
+		
+    "prefix": "bsps",
+		"body": [
+			"\\begin{equation*}",
+			"\t\\begin{split}",
+			"\t\t$1",
+			"\t\\end{split}",
+			"\\end{equation*}"
+		]
+	},
+	"factorial": {
+		
+    "prefix": "@!",
+		"body": "\\factorial{${1:\\cdot}}"
+	},
+	"interval": {
+		
+    "prefix": "intv",
+		"body": "\\interval{${1:\\cdot}}{${2:\\cdot}}"
+	},
+	"open interval": {
+		
+    "prefix": "ointv",
+		"body": "\\ointerval{${1:\\cdot}}{${2:\\cdot}}"
+	},
+	"left open interval": {
+		
+    "prefix": "lintv",
+		"body": "\\linterval{${1:\\cdot}}{${2:\\cdot}}"
+	},
+	"right open interval": {
+		
+    "prefix": "rintv",
+		"body": "\\rinterval{${1:\\cdot}}{${2:\\cdot}}"
+	},
+	"abs": {
+		
+    "prefix": "@|",
+		"body": "\\abs{$1}"
+	},
+	"varv": {
+		
+    "prefix": "@vv",
+		"body": "\\varv",
+		"description": "sharp v"
+	},
+	"ell": {
+		
+		"prefix": "@vl",
+		"body": "\\ell",
+		"description": "round v"
+	},
+	"Begin Pmatrix": {
+		
+    "prefix": "bpm",
+		"body": [
+			"\\begin{pNiceMatrix}",
+			"\t$1",
+			"\\end{pNiceMatrix}"
+		],
+		"description": "Insert a pNiceMatrix environment"
+	},
+	"Sum with limits": {
+		
+    "prefix": "suml",
+		"body": "\\sum\\limits_{$1}^{$2}",
+		"description": "Sum over some index"
+	},
+	"Sum with sublimit": {
+		
+    "prefix": "sumsl",
+		"body": "\\sum\\limits_{$1}",
+		"description": "Sum over some index"
+	},
+	"Product": {
+		
+    "prefix": "prod",
+		"body": "\\prod_{$1}^{$2}",
+		"description": "Product over some index"
+	},
+	"Subproduct": {
+		
+    "prefix": "prods",
+		"body": "\\prod_{$1}",
+		"description": "Product over some index"
+	},
+	"Product with limits": {
+		
+    "prefix": "prodl",
+		"body": "\\prod\\limits_{$1}^{$2}",
+		"description": "Product over some index"
+	},
+	"Subproduct with limits": {
+		
+    "prefix": "prodsl",
+		"body": "\\prod\\limits_{$1}",
+		"description": "Product over some index"
+	},
+	"Union": {
+		
+    "prefix": "union",
+		"body": "\\bigcup_{$1}^{$2}",
+		"description": "Union over some index"
+	},
+	"Subnion": {
+		
+    "prefix": "unions",
+		"body": "\\bigcup_{$1}",
+		"description": "Union over some index"
+	},
+	"Union with limits": {
+		
+    "prefix": "unionl",
+		"body": "\\bigcup\\limits_{$1}^{$2}",
+		"description": "Union over some index"
+	},
+	"Subunion with limits": {
+		
+    "prefix": "unionsl",
+		"body": "\\bigcup\\limits_{$1}",
+		"description": "Union over some index"
+	},
+	"Intersection": {
+		
+    "prefix": "intersection",
+		"body": "\\bigcap_{$1}^{$2}",
+		"description": "Intersection over some index"
+	},
+	"Subintersection": {
+		
+    "prefix": "intersections",
+		"body": "\\bigcap_{$1}",
+		"description": "Intersection over some index"
+	},
+	"Intersection with limits": {
+		
+    "prefix": "intersectionl",
+		"body": "\\bigcap\\limits_{$1}^{$2}",
+		"description": "Intersection over some index"
+	},
+	"Subintersection with limits": {
+		
+    "prefix": "intersectionsl",
+		"body": "\\bigcap\\limits_{$1}",
+		"description": "Intersection over some index"
+	},
+	"Limes": {
+		
+    "prefix": "lim",
+		"body": "\\lim_{$1 \\goesto $2}",
+		"description": "Limes"
+	},
+	"Limes with limits": {
+		
+    "prefix": "liml",
+		"body": "\\lim\\limits_{$1 \\goesto $2}",
+		"description": "Limes"
+	},
+	"Limes Inferior": {
+		
+    "prefix": "liminf",
+		"body": "\\liminf_{$1 \\goesto $2}",
+		"description": "Limes Inferior"
+	},
+	"Limes Inferior with limits": {
+		
+    "prefix": "liminfl",
+		"body": "\\liminf\\limits_{$1 \\goesto $2}",
+		"description": "Limes Inferior"
+	},
+	"Limes Superior": {
+		
+    "prefix": "limsub",
+		"body": "\\limsub_{$1 \\goesto $2}",
+		"description": "Limes Superior"
+	},
+	"Limes Superior with limits": {
+		
+    "prefix": "limsupl",
+		"body": "\\limsup\\limits_{$1 \\goesto $2}",
+		"description": "Limes Superior"
+	},
+	"2D Vector": {
+		
+    "prefix": "2vec",
+		"body": "\\begin{pNiceMatrix} $1 \\\\\\\\ $2 \\end{pNiceMatrix}",
+		"description": "2D Vector in one line"
+	},
+	"2D Vector side": {
+		
+    "prefix": "2vecs",
+		"body": "\\begin{pNiceMatrix} $1 & $2 \\end{pNiceMatrix}",
+		"description": "2D Vector in one line"
+	},
+	"2D Vector long": {
+		
+    "prefix": "2vecm",
+		"body": [
+			"\\begin{pNiceMatrix}",
+			"\t$1 \\\\\\\\",
+			"\t$2",
+			"\\end{pNiceMatrix}"
+		],
+		"description": "2D Vector in multiple lines"
+	},
+	"2D Matrix": {
+		
+    "prefix": "2mat",
+		"body": "\\begin{pNiceMatrix} $1 & $2 \\\\\\\\ $3 & $4 \\end{pNiceMatrix}",
+		"description": "2D Matrix in one line"
+	},
+	"2D Matrix long": {
+		
+    "prefix": "2matm",
+		"body": [
+			"\\begin{pNiceMatrix}",
+			"\t$1 & $2 \\\\\\\\",
+			"\t$3 & $4",
+			"\\end{pNiceMatrix}"
+		],
+		"description": "2D Matrix in multiple lines"
+	},
+	"3D Vector": {
+		
+    "prefix": "3vec",
+		"body": "\\begin{pNiceMatrix} $1 \\\\\\\\ $2 \\\\\\\\ $3 \\end{pNiceMatrix}",
+		"description": "3D Vector in one line"
+	},
+	"3D Vector side": {
+		
+    "prefix": "3vecs",
+		"body": "\\begin{pNiceMatrix} $1 & $2 & $3 \\end{pNiceMatrix}",
+		"description": "3D Vector in one line"
+	},
+	"3D Vector long": {
+		
+    "prefix": "3vecm",
+		"body": [
+			"\\begin{pNiceMatrix}",
+			"\t$1 \\\\\\\\",
+			"\t$2 \\\\\\\\",
+			"\t$3",
+			"\\end{pNiceMatrix}"
+		],
+		"description": "3D Vector in multiple lines"
+	},
+	"3D Matrix": {
+		
+    "prefix": "3mat",
+		"body": "\\begin{pNiceMatrix} $1 & $2 & $3 \\\\\\\\ $4 & $5 & $6 \\\\\\\\ $7 & $8 & $9 \\end{pNiceMatrix}",
+		"description": "3D Matrix in one line"
+	},
+	"3D Matrix long": {
+		
+    "prefix": "3matm",
+		"body": [
+			"\\begin{pNiceMatrix}",
+			"\t$1 & $2 & $3 \\\\\\\\",
+			"\t$4 & $5 & $6 \\\\\\\\",
+			"\t$7 & $8 & $9",
+			"\\end{pNiceMatrix}"
+		],
+		"description": "3D Matrix in multiple lines"
+	},
+	"3D System long": {
+		
+    "prefix": "3sysm",
+		"body": [
+			"\\begin{pNiceArray}{CCC|C}[first-col]",
+			"\t& $1 & $2 & $3 & $4 \\\\\\\\",
+			"\t& $5 & $6 & $7 & $8 \\\\\\\\",
+			"\t& $9 & $10 & $11 & $12",
+			"\\end{pNiceArray}"
+		],
+		"description": "3D Matrix in multiple lines"
+	},
+	"Sum": {
+		
+    "prefix": "sum",
+		"body": "\\sum_{$1}^{$2}",
+		"description": "Sum over some index"
+	},
+	"Subsum": {
+		
+    "prefix": "sums",
+		"body": "\\sum_{$1}",
+		"description": "Sum over some index"
+	},
+	"Restriction":{
+		"prefix": "restr",
+		"body": "\\restr*{$1}_{$2}", 
+		"description": "restriction of domain"
+	}
+}
