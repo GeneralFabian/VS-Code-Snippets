@@ -642,5 +642,5 @@
 		"prefix": "restr",
 		"body": "\\restr*{$1}_{$2}", 
 		"description": "restriction of domain"
-	}
+	},
 }

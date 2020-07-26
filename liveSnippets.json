@@ -356,13 +356,6 @@
         "triggerWhenComplete": true
     },
     {
-        "prefix": "< ?>$",
-        "body": "\\diamond ",
-        "mode": "maths",
-        "description": "⋄",
-        "triggerWhenComplete": true
-    },
-    {
         "prefix": "\\+ ?-$",
         "body": "\\pm ",
         "mode": "maths",
@@ -397,6 +390,34 @@
         "body": "\\begin{pNiceMatrix}\n\t$$1\n\\end{pNiceMatrix}",
         "mode":"maths",
         "description":"pNiceMatrix over multiple lines", 
+        "triggerWhenComplete":true
+    },
+    {
+        "prefix": "---",
+		"body": "_{$$1}",
+        "mode":"maths",
+        "description": "Subscript",
+        "triggerWhenComplete":true
+    }, 
+    {
+        "prefix": "\\bPar $", 
+        "body": "\\Par$$1{$$2}", 
+        "mode": "maths", 
+        "description":"(scalable) parentheses",
+        "triggerWhenComplete": true
+    },
+    {
+        "prefix": "\\$\\$",
+        "body": "\\( $$1 \\)", 
+        "mode":"text",
+        "description":"inline maths",
+        "triggerWhenComplete":true
+    },
+    {
+        "prefix": "\\bRRR $",
+        "body": "\\reals",
+        "mode":"maths",
+        "description":"Real Numbers",
         "triggerWhenComplete":true
     }
 ]
