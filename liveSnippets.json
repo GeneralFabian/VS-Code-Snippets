@@ -400,13 +400,6 @@
         "triggerWhenComplete":true
     }, 
     {
-        "prefix": "\\bPar $", 
-        "body": "\\Par$$1{$$2}", 
-        "mode": "maths", 
-        "description":"(scalable) parentheses",
-        "triggerWhenComplete": true
-    },
-    {
         "prefix": "\\$\\$",
         "body": "\\( $$1 \\)", 
         "mode":"text",
@@ -414,10 +407,17 @@
         "triggerWhenComplete":true
     },
     {
-        "prefix": "\\bRRR $",
-        "body": "\\reals",
+        "prefix": "/0",
+        "body": "\\emptyset",
+        "mode": "maths",
+        "description": "Empty Set",
+        "triggerWhenComplete": true
+    },
+    {
+        "prefix": "\\(\\)",
+        "body": "\\Par*{$$1}",
+        "description": "(scalable) parentheses",
         "mode":"maths",
-        "description":"Real Numbers",
         "triggerWhenComplete":true
     }
 ]
