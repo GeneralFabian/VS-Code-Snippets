@@ -137,7 +137,12 @@
 	"Teilmenge":{
 		"prefix": "@inn",
 		"body": "\\subset ",
-		"description": "Teilmenge"
+		"description": "Teilmenge ⊂ "
+	},
+	"Teilmenge oder gleich":{
+		"prefix": "@inq",
+		"body": "\\subseteq ",
+		"description": "Teilmenge ⊆ "
 	},
 	"Under Annotation":{
 		"prefix": "@under",
@@ -643,4 +648,9 @@
 		"body": "\\restr*{$1}_{$2}", 
 		"description": "restriction of domain"
 	},
+	"Valuation": {
+		"prefix": "nup",
+		"body": "\\valuation{$1}", 
+		"description": "Valuation of f at p"
+	}
 }
