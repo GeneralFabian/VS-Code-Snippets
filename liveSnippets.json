@@ -194,6 +194,13 @@
         "triggerWhenComplete": true
     },
     {
+        "prefix": "(^|[^\\\\]\\b|[ ,\\)\\]\\}]\\w*)(\\|-->)$",
+        "body": "$1\\longmapsto ",
+        "mode": "maths",
+        "description": "↦",
+        "triggerWhenComplete": true
+    },
+    {
         "prefix": "(^|[^\\\\])a(?:rc)?(sin|cos|tan|cot|csc|sec)$",
         "body": "$1\\arc$2 ",
         "mode": "maths",
@@ -400,8 +407,8 @@
         "triggerWhenComplete":true
     }, 
     {
-        "prefix": "\\$\\$",
-        "body": "\\( $$1 \\)", 
+        "prefix": " ?\\$\\$",
+        "body": " \\( $$1 \\)", 
         "mode":"text",
         "description":"inline maths",
         "triggerWhenComplete":true
@@ -417,6 +424,13 @@
         "prefix": "\\(\\)",
         "body": "\\Par*{$$1}",
         "description": "(scalable) parentheses",
+        "mode":"maths",
+        "triggerWhenComplete":true
+    },
+    {
+        "prefix": "\\[\\]",
+        "body": "\\Brack*{$$1}",
+        "description": "(scalable) brackets",
         "mode":"maths",
         "triggerWhenComplete":true
     }

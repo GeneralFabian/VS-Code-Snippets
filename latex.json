@@ -652,5 +652,13 @@
 		"prefix": "nup",
 		"body": "\\valuation{$1}", 
 		"description": "Valuation of f at p"
+	},
+	"Cases*":{
+		"prefix": "BSCAS",
+		"body": "\\begin{cases*}\n\t$1\n\\end{cases*}"
+	},
+	"Jacobi":{
+		"prefix": "jacobi",
+		"body": "\\Par*{\\frac{$1}{$2}}"
 	}
 }
